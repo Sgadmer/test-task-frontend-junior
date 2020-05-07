@@ -1,0 +1,52 @@
+%fontVar1 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+%fontVar2 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+%fontVar3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+%fontVar4 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+}
+
+%fontVar5 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+%fontVar6 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+%fontVar7 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+%gridMoviesGenres{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    justify-content: space-between;
+}
+
+$mainBlackColor: #333333;
+$mainRedColor: #e5261e;
+$mainWhiteColor: #ffffff;
+$mainGreyColor:#f2f2f2;
