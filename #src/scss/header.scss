@@ -1,0 +1,90 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 44px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+
+    &__symbol {
+        width: 36px;
+        height: 36px;
+        background-color: $mainRedColor;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-right: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__triangle {
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-bottom-width: 18px;
+        border-top-width: 18px;
+        border-left: 31px solid $mainWhiteColor;
+        transform: translateX(5px);
+        -webkit-transform: translateX(5px);
+        -moz-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+        -o-transform: translateX(5px);
+    }
+
+    &__title {
+        @extend %fontVar1;
+    }
+}
+
+input::placeholder {
+    @extend %fontVar2;
+    color: #828282;
+}
+
+input {
+    @extend %fontVar3;
+    border-bottom: 1px solid $mainBlackColor;
+    padding-bottom: 6px;
+}
+
+.search-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: flex-end;
+
+    &__input {
+        margin-right: 32px;
+        width: 320px;
+    }
+
+    &__button {
+        @extend %fontVar3;
+        color: $mainRedColor;
+    }
+}
+
+.login-btn {
+    @extend %fontVar3;
+    color: $mainWhiteColor;
+    text-align: center;
+    width: 113px;
+    background-color: $mainRedColor;
+    height: 38px;
+    border-radius: 4px;
+
+    &:hover {
+        background: #cc221b;
+    }
+}

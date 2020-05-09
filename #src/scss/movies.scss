@@ -1,0 +1,172 @@
+.movies-TV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .selector {
+        &__btn {
+            @extend %fontVar4;
+            padding-bottom: 3px;
+            color: $mainBlackColor;
+        }
+
+        &__btn:first-child {
+            margin-right: 24px;
+        }
+
+        &__btn_selected {
+            color: $mainRedColor;
+            border-bottom: 2px solid $mainRedColor;
+        }
+    }
+
+    .movies {
+        width: 100%;
+        margin-top: 32px;
+        &__new-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 16px;
+        }
+
+        &__fire-emoji {
+            transform: translateY(-4px);
+            -webkit-transform: translateY(-4px);
+            -moz-transform: translateY(-4px);
+            -ms-transform: translateY(-4px);
+            -o-transform: translateY(-4px);
+            margin-right: 10px;
+        }
+
+        h2 {
+            @extend %fontVar5;
+        }
+
+        &__list {
+            @extend %gridMoviesGenres;
+        }
+
+        &__item {
+            cursor: pointer;
+        }
+
+        &__img-desc {
+            position: relative;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        &__img {
+            object-fit: cover;
+            min-width: 100%;
+        }
+
+        &__description {
+            @extend %fontVar7;
+            background-color: hsla(0, 0%, 20%, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            color: $mainGreyColor;
+            padding: 16px;
+            opacity: 0;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &__title {
+            @extend %fontVar6;
+        }
+
+        .genres {
+            margin-top: 32px;
+
+            &__h2 {
+                margin-bottom: 16px;
+            }
+
+            & *{
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+            }
+
+            &-list {
+                @extend %gridMoviesGenres;
+
+                &__item {
+                    height: 208px;
+                    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+                    padding-top: 80px;
+                    padding-bottom: 24px;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:hover .genres-list__background {
+                        opacity: 1;
+                    }
+                }
+
+                &__background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0.8;
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                }
+
+                &__comedy {
+                    background: linear-gradient(136.27deg, #f2c94c 8.44%, #f29a4a 91.36%);
+                }
+
+                &__drama {
+                    background: linear-gradient(136.27deg, #f2994a 8.44%, #eb5757 91.36%);
+                }
+
+                &__fantasy {
+                    background: linear-gradient(136.27deg, #56ccf2 8.44%, #2f80ed 91.36%);
+                }
+
+                &__horrors {
+                    background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+                }
+
+                &__emoji-figcaption {
+                    @extend %fontVar6;
+                    color: $mainWhiteColor;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+}

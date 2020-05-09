@@ -1,0 +1,31 @@
+body {
+    margin: 0 auto;
+    background-color: $mainWhiteColor;
+    font-family: "Rubik";
+    font-style: normal;
+    color: $mainBlackColor;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+// * {
+//     border: 1px solid black;
+// }
+
+.main-сontent {
+    margin-top: 32px;
+    margin-bottom: 72px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1180px;
+    height: 100vh;
+}
+
+
+.display-none-class{
+    display: none !important;
+}

@@ -103,7 +103,7 @@ input::placeholder {
   line-height: 28px;
 }
 
-.movies-TV .movies__title {
+.movies-TV .movies .genres-list__emoji-figcaption, .movies-TV .movies__title {
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
@@ -115,7 +115,7 @@ input::placeholder {
   line-height: 22px;
 }
 
-.movies-TV .movies__list {
+.movies-TV .movies .genres-list, .movies-TV .movies__list {
   display: grid;
   grid-template-columns: repeat(4, 24%);
   justify-content: space-between;
@@ -142,6 +142,10 @@ body {
   margin: 0 auto;
   max-width: 1180px;
   height: 100vh;
+}
+
+.display-none-class {
+  display: none !important;
 }
 
 header {
@@ -226,9 +230,6 @@ input {
   justify-content: center;
   align-items: center;
 }
-.movies-TV .selector {
-  margin-bottom: 32px;
-}
 .movies-TV .selector__btn {
   padding-bottom: 3px;
   color: #333333;
@@ -241,7 +242,8 @@ input {
   border-bottom: 2px solid #e5261e;
 }
 .movies-TV .movies {
-  min-width: 100%;
+  width: 100%;
+  margin-top: 32px;
 }
 .movies-TV .movies__new-wrapper {
   display: flex;
@@ -255,6 +257,9 @@ input {
   -ms-transform: translateY(-4px);
   -o-transform: translateY(-4px);
   margin-right: 10px;
+}
+.movies-TV .movies__item {
+  cursor: pointer;
 }
 .movies-TV .movies__img-desc {
   position: relative;
@@ -295,4 +300,57 @@ input {
 }
 .movies-TV .movies .genres__h2 {
   margin-bottom: 16px;
+}
+.movies-TV .movies .genres * {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.movies-TV .movies .genres-list__item {
+  height: 208px;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+  padding-top: 80px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.movies-TV .movies .genres-list__item:hover .genres-list__background {
+  opacity: 1;
+}
+.movies-TV .movies .genres-list__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.movies-TV .movies .genres-list__comedy {
+  background: linear-gradient(136.27deg, #f2c94c 8.44%, #f29a4a 91.36%);
+}
+.movies-TV .movies .genres-list__drama {
+  background: linear-gradient(136.27deg, #f2994a 8.44%, #eb5757 91.36%);
+}
+.movies-TV .movies .genres-list__fantasy {
+  background: linear-gradient(136.27deg, #56ccf2 8.44%, #2f80ed 91.36%);
+}
+.movies-TV .movies .genres-list__horrors {
+  background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+}
+.movies-TV .movies .genres-list__emoji-figcaption {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
