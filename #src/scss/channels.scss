@@ -1,0 +1,89 @@
+/*Channels*/
+.channels {
+    display: none;
+    max-height: 696px;
+    overflow-y: scroll;
+    width: 100%;
+    margin-top: 27px;
+
+    &-list {
+        &__item {
+            height: 162px;
+            background-color: $mainGreyColor;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-right: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__logo-wrap {
+            width: 400px;
+            height: 162px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+        }
+
+        &__info {
+            padding-top: 21px;
+            padding-bottom: 19px;
+            height: 100%;
+        }
+
+        &__channel-title {
+            @extend %fontVar1;
+            margin-bottom: 17px;
+        }
+
+        &__broadcast-list *{
+            @extend %fontVar2;
+            /*For IE & EDGE*/
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            /**************/
+            
+            & *{
+                margin-bottom: 12px;
+            }
+        }
+
+        &__broadcast{
+            display: flex;
+            flex-direction: row;
+
+            &:first-child{
+                color: $mainRedColor;
+            }
+        }
+
+        &__broadcast-time{
+            margin-right: 12px;
+        }
+    }
+}
+
+/*Scrollbar находится в customScrollBar.js*/
+#channelsScrollBar {
+    border-radius: 2px !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -ms-border-radius: 2px !important;
+    -o-border-radius: 2px !important;
+    width: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+    transform: translateX(8px);
+    -webkit-transform: translateX(8px);
+    -moz-transform: translateX(8px);
+    -ms-transform: translateX(8px);
+    -o-transform: translateX(8px);
+}
+/*--------------------*/

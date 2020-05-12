@@ -25,7 +25,7 @@ nav, footer, header, aside {
 html, body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
+  font-size: 100% !important;
   line-height: 1;
   font-size: 14px;
   -ms-text-size-adjust: 100%;
@@ -73,25 +73,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.logo__title {
+/*Variables*/
+.channels-list__channel-title, .logo__title {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
 }
 
-input::placeholder {
+footer .htc__contacts, footer .htc__info p, .channels-list__broadcast-list *, input::placeholder {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
 }
 
-.login-btn, .search-form__button, input {
+footer .htc__site, .login-btn, .search-form__button, input {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
 }
 
-.movies-TV .selector__btn {
+.modal__enter-h2, .movies-TV .selector__btn {
   font-weight: 500;
   font-size: 28px;
   line-height: 33px;
@@ -117,10 +118,22 @@ input::placeholder {
 
 .movies-TV .movies .genres-list, .movies-TV .movies__list {
   display: grid;
+  display: -ms-flexbox;
+  /*For IE & EDGE*/
+  min-width: 100%;
   grid-template-columns: repeat(4, 24%);
   justify-content: space-between;
 }
 
+.modal__checkbox-wrap label {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/*--------------------*/
+/*Main classes*/
 body {
   margin: 0 auto;
   background-color: #ffffff;
@@ -131,23 +144,33 @@ body {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
+  overflow-x: hidden;
 }
 
 .main-сontent {
   margin-top: 32px;
-  margin-bottom: 72px;
 }
 
 .wrapper {
   margin: 0 auto;
   max-width: 1180px;
-  height: 100vh;
+}
+
+.display-block-class {
+  display: block !important;
 }
 
 .display-none-class {
   display: none !important;
+  max-width: 0 !important;
+  min-height: 0 !important;
 }
 
+button span {
+  position: relative;
+}
+
+/*--------------------*/
 header {
   display: flex;
   justify-content: space-between;
@@ -224,6 +247,7 @@ input {
   background: #cc221b;
 }
 
+/*Movies*/
 .movies-TV {
   display: flex;
   flex-direction: column;
@@ -233,6 +257,8 @@ input {
 .movies-TV .selector__btn {
   padding-bottom: 3px;
   color: #333333;
+  outline: none;
+  /*For IE*/
 }
 .movies-TV .selector__btn:first-child {
   margin-right: 24px;
@@ -242,6 +268,7 @@ input {
   border-bottom: 2px solid #e5261e;
 }
 .movies-TV .movies {
+  display: none;
   width: 100%;
   margin-top: 32px;
 }
@@ -260,6 +287,8 @@ input {
 }
 .movies-TV .movies__item {
   cursor: pointer;
+  min-width: 24%;
+  /*For IE & EDGE*/
 }
 .movies-TV .movies__img-desc {
   position: relative;
@@ -282,7 +311,6 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
   color: #f2f2f2;
   padding: 16px;
   opacity: 0;
@@ -309,6 +337,8 @@ input {
   -o-border-radius: 6px;
 }
 .movies-TV .movies .genres-list__item {
+  min-width: 24%;
+  /*For IE & EDGE*/
   height: 208px;
   box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
   padding-top: 80px;
@@ -352,5 +382,200 @@ input {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 99;
+}
+
+/*--------------------*/
+/*Channels*/
+.channels {
+  display: none;
+  max-height: 696px;
+  overflow-y: scroll;
+  width: 100%;
+  margin-top: 27px;
+}
+.channels-list__item {
+  height: 162px;
+  background-color: #f2f2f2;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+}
+.channels-list__item:last-child {
+  margin-bottom: 0;
+}
+.channels-list__logo-wrap {
+  width: 400px;
+  height: 162px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+.channels-list__info {
+  padding-top: 21px;
+  padding-bottom: 19px;
+  height: 100%;
+}
+.channels-list__channel-title {
+  margin-bottom: 17px;
+}
+.channels-list__broadcast-list * {
+  /*For IE & EDGE*/
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /**************/
+}
+.channels-list__broadcast-list * * {
+  margin-bottom: 12px;
+}
+.channels-list__broadcast {
+  display: flex;
+  flex-direction: row;
+}
+.channels-list__broadcast:first-child {
+  color: #e5261e;
+}
+.channels-list__broadcast-time {
+  margin-right: 12px;
+}
+
+/*Scrollbar находится в customScrollBar.js*/
+#channelsScrollBar {
+  border-radius: 2px !important;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  -ms-border-radius: 2px !important;
+  -o-border-radius: 2px !important;
+  width: 8px !important;
+  display: flex !important;
+  justify-content: center !important;
+  transform: translateX(8px);
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  -o-transform: translateX(8px);
+}
+
+/*--------------------*/
+/*Footer*/
+footer {
+  background-color: #f2f2f2;
+  margin-top: 72px;
+  padding-top: 22px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+}
+footer .htc {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .htc__logo {
+  margin-right: 40px;
+}
+footer .htc__info p {
+  text-decoration: none;
+  line-height: 19px;
+  /*For IE*/
+}
+footer .htc__contacts {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+footer .htc__site {
+  color: #1F4766;
+}
+
+/*--------------------*/
+.modal-wrap {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.6);
+  z-index: 100 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #ffffff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  width: 304px;
+  height: 394px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+  position: relative;
+}
+.modal__enter-h2 {
+  margin-bottom: 24px;
+}
+.modal__enter-data-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.modal__enter-data-wrap > input {
+  width: 232px;
+}
+.modal__enter-data-wrap * {
+  margin-bottom: 24px;
+}
+.modal__checkbox-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.modal__checkbox-wrap input[type=checkbox] {
+  display: none;
+}
+.modal__checkbox-wrap label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  -webkit-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.modal__checkbox-wrap label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+}
+.modal__checkbox-wrap input[type=checkbox]:checked + label:before {
+  content: url(/img/checkbox/checkbox-checked.svg);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  color: #0066ff;
+  text-align: center;
+  line-height: 15px;
+}
+.modal__login-btn {
+  position: absolute;
+  bottom: 36px;
 }

@@ -27,20 +27,37 @@
 
                 <form class="search-form">
                     <input class="search-form__input" type="text" placeholder="Поиск...">
-                    <button class="search-form__button" type="reset">Найти</button>
+                    <button class="search-form__button" type="reset"><span>Найти</span></button>
                 </form>
 
-                <button class="header__login-btn  header__login-btn_in login-btn">Войти</button>
+                <button class="header__login-btn  header__login-btn_in login-btn"><span>Войти</span></button>
+
+                <div class="modal-wrap">
+                    <form action="#" class="modal">
+                        <h2 class="modal__enter-h2">Вход</h2>
+                        <div class="modal__enter-data-wrap">
+                            <input class="" type="text" placeholder="Логин">
+                            <input class="" type="text" placeholder="Пароль">
+                            <div class="modal__checkbox-wrap">
+                                <input type="checkbox" id="box-1">
+                                <label for="box-1"><span>Запомнить</span></label>
+                            </div>
+                        </div>
+                        <button class="modal__login-btn login-btn" type="submit"><span>Войти</span></button>
+                    </form>
+                </div>
+
 
             </header>
 
             <div class="movies-TV">
                 <div class="selector">
-                    <button class="selector__btn selector__btn_selected">Фильмы</button>
-                    <button class="selector__btn ">Телеканалы</button>
+                    <button class="selector__btn  selector__btn_selected"
+                        data-selector="movies"><span>Фильмы</span></button>
+                    <button class="selector__btn" data-selector="channels"><span>Телеканалы</span></button>
                 </div>
 
-                <div class="movies ">
+                <div class="movies moviesAndChannelsBlocks display-block-class">
 
                     <div class="movies__new-wrapper">
                         <img src="/img/movies/emoji/fire.png" alt="fire emoji" class="movies__fire-emoji">
@@ -142,22 +159,180 @@
                     </div>
                 </div>
 
-                <div class="channels">
-                    
+                <div class="channels moviesAndChannelsBlocks">
+                    <div class="channels-list">
+
+                        <div class="channels-list__item">
+                            <div class="channels-list__logo-wrap">
+                                <img src="/img/channels/1.svg" alt="Первый канал" class="channels-list__logo">
+                            </div>
+                            <div class="channels-list__info">
+                                <h2 class="channels-list__channel-title">Первый канал</h2>
+                                <ul class="channels-list__broadcast-list">
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">13:00</p>
+                                        <p class="channels-list__broadcast-title">Новости (с субтитрами)</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">14:00</p>
+                                        <p class="channels-list__broadcast-title">Давай поженимся</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">15:00</p>
+                                        <p class="channels-list__broadcast-title">Другие новости</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="channels-list__item">
+                            <div class="channels-list__logo-wrap">
+                                <img src="/img/channels/2.svg" alt="2x2" class="channels-list__logo">
+                            </div>
+                            <div class="channels-list__info">
+                                <h2 class="channels-list__channel-title">2x2</h2>
+                                <ul class="channels-list__broadcast-list">
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">13:00</p>
+                                        <p class="channels-list__broadcast-title">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">14:00</p>
+                                        <p class="channels-list__broadcast-title">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия
+                                        </p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">15:00</p>
+                                        <p class="channels-list__broadcast-title">БУРДАШЕВ. Сезон 1, 20 серия</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="channels-list__item">
+                            <div class="channels-list__logo-wrap">
+                                <img src="/img/channels/3.svg" alt="РБК" class="channels-list__logo">
+                            </div>
+                            <div class="channels-list__info">
+                                <h2 class="channels-list__channel-title">РБК</h2>
+                                <ul class="channels-list__broadcast-list">
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">13:00</p>
+                                        <p class="channels-list__broadcast-title">ДЕНЬ. Горючая смесь: как бороться с
+                                            суррогатом на АЗС</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">14:00</p>
+                                        <p class="channels-list__broadcast-title">ДЕНЬ. Главные темы</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">15:00</p>
+                                        <p class="channels-list__broadcast-title">Главные новости</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="channels-list__item">
+                            <div class="channels-list__logo-wrap">
+                                <img src="/img/channels/4.svg" alt="AMEDIA PREMIUM" class="channels-list__logo">
+                            </div>
+                            <div class="channels-list__info">
+                                <h2 class="channels-list__channel-title">AMEDIA PREMIUM</h2>
+                                <ul class="channels-list__broadcast-list">
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">13:00</p>
+                                        <p class="channels-list__broadcast-title">Клиент всегда мёртв</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">14:00</p>
+                                        <p class="channels-list__broadcast-title">Голодные игры: Сойка-пересмешница.
+                                            Часть I</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">15:00</p>
+                                        <p class="channels-list__broadcast-title">Секс в большом городе</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="channels-list__item">
+                            <div class="channels-list__logo-wrap">
+                                <img src="/img/channels/5.svg" alt="" class="channels-list__logo">
+                            </div>
+                            <div class="channels-list__info">
+                                <h2 class="channels-list__channel-title">LOREM</h2>
+                                <ul class="channels-list__broadcast-list">
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">13:00</p>
+                                        <p class="channels-list__broadcast-title">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit.</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">14:00</p>
+                                        <p class="channels-list__broadcast-title">Perferendis saepe necessitatibus ex
+                                            expedita, dolores aliquid placeat sed.</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">15:00</p>
+                                        <p class="channels-list__broadcast-title">Lorem asperiores voluptatem quibusdam
+                                            odio amet.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="channels-list__item">
+                            <div class="channels-list__logo-wrap">
+                                <img src="/img/channels/6.svg" alt="" class="channels-list__logo">
+                            </div>
+                            <div class="channels-list__info">
+                                <h2 class="channels-list__channel-title">LOREM2</h2>
+                                <ul class="channels-list__broadcast-list">
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">13:00</p>
+                                        <p class="channels-list__broadcast-title">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit.</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">14:00</p>
+                                        <p class="channels-list__broadcast-title">Perferendis saepe necessitatibus ex
+                                            expedita, dolores aliquid placeat sed.</p>
+                                    </li>
+                                    <li class="channels-list__broadcast">
+                                        <p class="channels-list__broadcast-time">15:00</p>
+                                        <p class="channels-list__broadcast-title">Lorem asperiores voluptatem quibusdam
+                                            odio amet.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
+
+        <footer>
+            <div class="wrapper">
+                <div class="htc">
+                    <img src="/img/footer/htc-logo.svg" alt="htc-logo" class="htc__logo">
+                    <div class="htc__info">
+                        <p class="htc__adress">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246
+                            (ДК «Металлург»)</p>
+                        <p class="htc__contacts">+<span>7</span> <span>(3412) 93</span><span>-88-61</span>, 43-29-29</p>
+                        <!-- span чтобы убрать подчеркивание телефона в IE.-->
+                        <a href="https://htc-cs.ru/" target="_blank" class="htc__site">htc-cs.ru</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
-
-
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
 </body>
 

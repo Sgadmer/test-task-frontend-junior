@@ -1,14 +1,3 @@
-
-document.addEventListener('DOMContentLoaded', function(){ 
-$(".channels").niceScroll({
-    cursorcolor: "#BDBDBD",
-    cursorwidth: "4px",
-    background: "#f2f2f2",
-    autohidemode: "false",
-    cursorborder: "none",
-    cursorborderradius: 2,
-    scrollbarid: 'channelsScrollBar',
-});
 let moviesChannelsSelectors = document
     .querySelectorAll('.selector__btn');
 
@@ -100,5 +89,3 @@ Array.prototype.forEach.call(
 
 
 
-
-});

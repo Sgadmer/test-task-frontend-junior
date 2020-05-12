@@ -1,3 +1,4 @@
+/*Main classes*/
 body {
     margin: 0 auto;
     background-color: $mainWhiteColor;
@@ -8,24 +9,29 @@ body {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
+    overflow-x: hidden;
 }
-
-// * {
-//     border: 1px solid black;
-// }
 
 .main-сontent {
     margin-top: 32px;
-    margin-bottom: 72px;
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1180px;
-    height: 100vh;
 }
 
+.display-block-class{
+    display: block !important;
+}
 
 .display-none-class{
     display: none !important;
+    max-width: 0 !important;
+    min-height: 0 !important;
 }
+
+button span{
+    position: relative;
+}
+/*--------------------*/
