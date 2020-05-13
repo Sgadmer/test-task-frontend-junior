@@ -17,38 +17,45 @@
 
             <header>
 
-                <div class="logo">
-                    <div class="logo__symbol">
-                        <div class="logo__triangle"></div>
+                <div class="logo-serach-wrap">
+                    <div class="logo">
+                        <div class="logo__symbol">
+                            <div class="logo__triangle"></div>
+                        </div>
+                        <div class="logo__title">Видеосервис</div>
                     </div>
-                    <div class="logo__title">Видеосервис</div>
+
+                    <form class="search-form">
+                        <input class="search-form__input" type="text" placeholder="Поиск...">
+                        <button class="search-form__button" type="reset"><span>Найти</span></button>
+                    </form>
                 </div>
+                <button class="header__login-btn login-btn"><span>Войти</span></button>
+
+                <div class="userNameExit display-none-class">
+                    <p class="userName"></p>
+                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя">
+                    <button class="exit-btn">Выйти</button>
+                </div>
+            </header>
 
 
-                <form class="search-form">
-                    <input class="search-form__input" type="text" placeholder="Поиск...">
-                    <button class="search-form__button" type="reset"><span>Найти</span></button>
-                </form>
-
-                <button class="header__login-btn  header__login-btn_in login-btn"><span>Войти</span></button>
-
-                <div class="modal-wrap">
-                    <form action="#" class="modal">
+            <div class="modal-wrap display-none-class">
+                <form action="#" class="modal">
+                    <div class="modal__h2-login-data-wrap">
                         <h2 class="modal__enter-h2">Вход</h2>
                         <div class="modal__enter-data-wrap">
-                            <input class="" type="text" placeholder="Логин">
-                            <input class="" type="text" placeholder="Пароль">
+                            <input class="modal__login" type="text" placeholder="Логин">
+                            <input class="modal__password" type="text" placeholder="Пароль">
                             <div class="modal__checkbox-wrap">
                                 <input type="checkbox" id="box-1">
                                 <label for="box-1"><span>Запомнить</span></label>
                             </div>
                         </div>
-                        <button class="modal__login-btn login-btn" type="submit"><span>Войти</span></button>
-                    </form>
-                </div>
-
-
-            </header>
+                    </div>
+                    <button class="modal__login-btn login-btn" type="submit"><span>Войти</span></button>
+                </form>
+            </div>
 
             <div class="movies-TV">
                 <div class="selector">

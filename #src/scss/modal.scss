@@ -1,30 +1,18 @@
 .modal-wrap {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(51, 51, 51, 0.6);
-    z-index: 100 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %standartModalWrap;
 }
 
 .modal {
+    @extend %standartModal;
     background-color: $mainWhiteColor;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
     width: 304px;
     height: 394px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 36px;
-    position: relative;
+
+    &__h2-login-data-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__enter-h2 {
         @extend %fontVar4;
@@ -95,7 +83,6 @@
     }
 
     &__login-btn {
-        position: absolute;
-        bottom: 36px;
+        @extend %fontVar3;
     }
 }

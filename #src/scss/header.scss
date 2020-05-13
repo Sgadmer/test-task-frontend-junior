@@ -1,9 +1,15 @@
-
 header {
+    position: sticky !important;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 44px;
+    z-index: 99;
+    background-color: $mainWhiteColor;
+}
+.logo-serach-wrap {
+    display: flex;
 }
 
 .logo {
@@ -11,6 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     cursor: default;
+    margin-right: 207px;
 
     &__symbol {
         width: 36px;
@@ -86,5 +93,22 @@ input {
 
     &:hover {
         background: #cc221b;
+    }
+}
+.userNameExit {
+    display: flex;
+    * {
+        @extend %fontVar3;
+    }
+    .userName {
+        margin-right: 16px;
+        cursor: pointer;
+    }
+    .user-name-input {
+        margin-right: 16px;
+        margin-bottom: -8px;
+    }
+    .exit-btn {
+        color: $mainRedColor;
     }
 }
