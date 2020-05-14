@@ -1,5 +1,5 @@
 header {
-    position: sticky !important;
+    position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -10,6 +10,8 @@ header {
 }
 .logo-serach-wrap {
     display: flex;
+    justify-content: space-between;
+    width: 67%;
 }
 
 .logo {
@@ -17,11 +19,10 @@ header {
     justify-content: space-between;
     align-items: center;
     cursor: default;
-    margin-right: 207px;
 
     &__symbol {
-        width: 36px;
-        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
         background-color: $mainRedColor;
         border-radius: 50%;
         -webkit-border-radius: 50%;
@@ -80,6 +81,10 @@ input {
         @extend %fontVar3;
         color: $mainRedColor;
     }
+}
+
+.phone-search-button{
+    display: none;
 }
 
 .login-btn {

@@ -42,29 +42,29 @@
             margin-bottom: 17px;
         }
 
-        &__broadcast-list *{
-            @extend %fontVar2;
+        &__broadcast-list * {
             /*For IE & EDGE*/
             font-weight: normal;
-            font-size: 16px;
+    
             line-height: 19px;
             /**************/
-            
-            & *{
+            @extend %fontVar2;
+
+            & * {
                 margin-bottom: 12px;
             }
         }
 
-        &__broadcast{
+        &__broadcast {
             display: flex;
             flex-direction: row;
 
-            &:first-child{
+            &:first-child {
                 color: $mainRedColor;
             }
         }
 
-        &__broadcast-time{
+        &__broadcast-time {
             margin-right: 12px;
         }
     }

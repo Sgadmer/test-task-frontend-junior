@@ -5,7 +5,7 @@ footer{
     margin-top: 72px;
     padding-top: 22px;
     padding-bottom: 25px;
-    box-sizing: border-box;
+
 
     .htc{
         display: flex;
@@ -13,6 +13,7 @@ footer{
 
         &__logo{
             margin-right: 40px;
+            min-width: 32px;
         }
 
         &__info{

@@ -1,0 +1,38 @@
+/*mediaSmallDesktop*/
+/* Portrait tablets and small desktops */
+@media (max-width: 1180px) {
+  .channels-list__item {
+    height: -webkit-max-content;
+    height: max-content;
+  }
+  .channels-list__logo-wrap {
+    width: 300px;
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
+
+  #channelsScrollBar {
+    transform: translateX(-4px);
+    -webkit-transform: translateX(-4px);
+    -moz-transform: translateX(-4px);
+    -ms-transform: translateX(-4px);
+    -o-transform: translateX(-4px);
+  }
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 950px) {
+  html,
+body {
+    font-size: 20px;
+    color: red;
+  }
+
+  .search-form {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */
+/*--------------------*/

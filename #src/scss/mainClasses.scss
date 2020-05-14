@@ -9,7 +9,6 @@ body {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
-    overflow-x: hidden;
 }
 
 .main-сontent {
@@ -21,29 +20,28 @@ body {
     max-width: 1180px;
 }
 
-.display-block-class{
+.display-block-class {
     display: block !important;
 }
 
-.display-none-class{
+.display-none-class {
     display: none !important;
     max-width: 0 !important;
     max-height: 0 !important;
+    opacity: 0 !important;
 }
 
-button span{
+button span {
     position: relative;
 }
 
-.input-error{
+.input-error {
     color: $mainRedColor;
     border-color: $mainRedColor;
 }
 
-.input-error::placeholder{
+.input-error::placeholder {
     color: $mainRedColor !important;
 }
-
-
 
 /*--------------------*/

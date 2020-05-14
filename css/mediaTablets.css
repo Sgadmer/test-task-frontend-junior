@@ -1,0 +1,9 @@
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  html, body {
+    font-size: 30px !important;
+    color: blue !important;
+  }
+}
+/* Portrait phones and smaller */
+/* Iphone 5 */

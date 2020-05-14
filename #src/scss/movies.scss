@@ -52,7 +52,7 @@
 
         &__item {
             cursor: pointer;
-            min-width: 24%;/*For IE & EDGE*/
+            min-width: 24%;
         }
 
         &__img-desc {
@@ -67,7 +67,6 @@
         }
 
         &__img {
-            object-fit: cover;
             min-width: 100%;
         }
 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
 </head>
 
 
@@ -22,19 +23,19 @@
                         <div class="logo__symbol">
                             <div class="logo__triangle"></div>
                         </div>
-                        <div class="logo__title">Видеосервис</div>
+                        <h2 class="logo__title">Видеосервис</h2>
                     </div>
 
                     <form class="search-form">
-                        <input class="search-form__input" type="text" placeholder="Поиск...">
+                        <input class="search-form__input" type="text" placeholder="Поиск..." spellcheck="false">
                         <button class="search-form__button" type="reset"><span>Найти</span></button>
                     </form>
                 </div>
+                <img src="/img/headerPhone/1.svg" alt="phone search button" class="phone-search-button">
                 <button class="header__login-btn login-btn"><span>Войти</span></button>
-
                 <div class="userNameExit display-none-class">
                     <p class="userName"></p>
-                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя">
+                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя" spellcheck="false">
                     <button class="exit-btn">Выйти</button>
                 </div>
             </header>
@@ -45,10 +46,10 @@
                     <div class="modal__h2-login-data-wrap">
                         <h2 class="modal__enter-h2">Вход</h2>
                         <div class="modal__enter-data-wrap">
-                            <input class="modal__login" type="text" placeholder="Логин">
-                            <input class="modal__password" type="text" placeholder="Пароль">
+                            <input class="modal__login" type="text" placeholder="Логин" spellcheck="false">
+                            <input class="modal__password" type="text" placeholder="Пароль" spellcheck="false">
                             <div class="modal__checkbox-wrap">
-                                <input type="checkbox" id="box-1">
+                                <input type="checkbox" id="box-1" spellcheck="false">
                                 <label for="box-1"><span>Запомнить</span></label>
                             </div>
                         </div>
