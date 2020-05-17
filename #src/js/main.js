@@ -1,7 +1,5 @@
-//@prepros-append start.js
-//@prepros-append modalLogin.js
-//@prepros-append changeUserName.js
-//@prepros-append customScrollBar.js
-//@prepros-append movies&ChannelsSelectors.js
-//@prepros-append tabletsPhoneSearch.js
-//@prepros-append end.js
+import './modalLogin.js';
+import './changeUserName.js';
+import './customScrollBar.js';
+import './movies&ChannelsSelectors.js';
+import './tabletsPhoneSearch.js';

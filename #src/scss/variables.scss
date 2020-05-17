@@ -1,63 +1,90 @@
 /*Variables*/
-%fontVar1 {
+
+@mixin fontVar1 (){
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.5rem;
 }
+%fontVar1 {
+    @include fontVar1;
+}
 
-%fontVar2 {
+@mixin fontVar2 (){
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.1875rem;
 }
+%fontVar2 {
+    @include fontVar2;
+}
 
-%fontVar3 {
+@mixin fontVar3 (){
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.1875rem;
 }
+%fontVar3 {
+    @include fontVar3;
+}
 
-%fontVar4 {
+@mixin fontVar4 (){
     font-weight: 500;
     font-size: 1.75rem;
     line-height: 2.0625rem;
 }
+%fontVar4 {
+    @include fontVar4;
+}
 
-%fontVar5 {
+@mixin fontVar5 (){
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.75rem;
 }
+%fontVar5 {
+    @include fontVar5;
+}
 
-%fontVar6 {
+@mixin fontVar6 {
     font-weight: normal;
     font-size: 1.25rem;
     line-height: 1.5rem;
 }
+%fontVar6 {
+    @include fontVar6;
+}
 
-%fontVar7 {
+@mixin fontVar7 (){
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.375rem;
 }
+%fontVar7 {
+    @include fontVar7;
+}
 
-%gridMoviesGenres{
+@mixin gridMoviesGenres (){
     display: grid;
-    display: -ms-flexbox;/*For IE & EDGE*/
+    display: -ms-flexbox; /*For IE & EDGE*/
     min-width: 100%;
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
-    
+}
+%gridMoviesGenres {
+    @include gridMoviesGenres;
 }
 
-%noSelect{
+@mixin noSelect (){
     -webkit-user-select: none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+%noSelect {
+    @include noSelect;
 }
 
-%standartModalWrap{
+@mixin standartModalWrap (){
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -70,8 +97,11 @@
     align-items: center;
     overflow: hidden;
 }
+%standartModalWrap {
+    @include standartModalWrap;
+}
 
-%standartModal{
+@mixin standartModal (){
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -84,11 +114,16 @@
     padding: 36px;
     position: relative;
 }
+%standartModal {
+    @include standartModal;
+}
+
+
 
 $mainBlackColor: #333333;
 $mainRedColor: #e5261e;
 $mainWhiteColor: #ffffff;
-$mainGreyColor:#f2f2f2;
-$secondGreyColor:#BDBDBD;
-$htc-color:#1F4766;
+$mainGreyColor: #f2f2f2;
+$secondGreyColor: #bdbdbd;
+$htc-color: #1f4766;
 /*--------------------*/

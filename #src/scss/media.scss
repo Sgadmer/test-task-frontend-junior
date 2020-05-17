@@ -277,7 +277,7 @@
 
             &__info {
                 p {
-                    @extend %fontVar2;
+                    @include fontVar2;
                     text-decoration: none;
                     line-height: 19px; /*For IE*/
                 }
@@ -285,11 +285,11 @@
             &__contacts {
                 margin-top: 6px;
                 margin-bottom: 10px;
-                @extend %fontVar2;
+                @include fontVar2;
             }
 
             &__site {
-                @extend %fontVar3;
+                @include fontVar3;
                 color: $htc-color;
             }
         }
