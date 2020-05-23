@@ -65,25 +65,25 @@
         }
 
         &__broadcast-time {
-            margin-right: 12px;
+            margin-right: 22px;
         }
     }
 }
 
 /*Scrollbar находится в customScrollBar.js*/
 #channelsScrollBar {
-    border-radius: 2px !important;
-    -webkit-border-radius: 2px !important;
-    -moz-border-radius: 2px !important;
-    -ms-border-radius: 2px !important;
-    -o-border-radius: 2px !important;
-    width: 8px !important;
-    display: flex !important;
-    justify-content: center !important;
-    transform: translateX(8px);
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    -ms-transform: translateX(8px);
-    -o-transform: translateX(8px);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    width: 8px;
+    display: flex;
+    justify-content: center;
+    transform: translateX(14px);
+    -webkit-transform: translateX(14px);
+    -moz-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    -o-transform: translateX(14px);
 }
 /*--------------------*/

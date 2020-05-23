@@ -1,5 +1,4 @@
 /*mediaSmallDesktop*/
-
 /* Portrait tablets and small desktops */
 @media (max-width: 1180px) {
     .channels-list {
@@ -103,29 +102,37 @@
             &__list {
                 padding: 3%;
                 display: flex;
+                justify-content: space-between;
                 flex-wrap: wrap;
             }
 
             &__item {
-                width: 45%;
-            }
-        }
-
-        .genres {
-            &__h2 {
-                margin-left: 2%;
+                min-width: 45%;
             }
 
-            &-list {
-                padding: 3%;
-                display: flex !important;
-                flex-wrap: wrap;
+            &__img {
+                max-width: 100%;
+                max-height: 100%;
+            }
 
-                &__item {
-                    width: 45%;
+            .genres {
+                &__h2 {
+                    margin-left: 2%;
+                }
 
-                    &:nth-child(1) {
-                        margin-bottom: 3%;
+                &-list {
+                    padding: 3%;
+                    display: flex !important;
+                    flex-wrap: wrap;
+
+                    &__item {
+                        min-width: 45%;
+                        max-width: 45%;
+                        max-height: 100%;
+
+                        &:nth-child(1) {
+                            margin-bottom: 3%;
+                        }
                     }
                 }
             }
@@ -140,25 +147,27 @@
     .movies-TV {
         .movies {
             &__item {
-                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
 
                 & {
                     margin-top: 3%;
                 }
             }
-        }
 
-        .genres {
-            &-list {
-                &__item {
-                    width: 100%;
+            .genres {
+                &-list {
+                    &__item {
+                        min-width: 100%;
+                        max-width: 100%;
 
-                    & {
-                        margin-top: 3%;
-                    }
+                        & {
+                            margin-top: 3%;
+                        }
 
-                    &:nth-child(1) {
-                        margin-bottom: 0;
+                        &:nth-child(1) {
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -191,7 +200,7 @@
 @media (max-width: 480px) {
     header {
         margin-bottom: 15%;
-
+        padding: 0 2%;
         .logo-serach-wrap {
             margin-left: 0;
         }
@@ -215,11 +224,13 @@
             }
         }
 
-        .phone-search-button {
-            margin-right: auto;
+        .header__login-btn{
+            margin-right: 0;
         }
+
         .userNameExit .user-name-input {
             max-width: 150px;
+            margin-right: 0;
         }
     }
 

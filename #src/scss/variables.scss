@@ -64,10 +64,9 @@
 }
 
 @mixin gridMoviesGenres (){
-    display: grid;
+    display: flex;
     display: -ms-flexbox; /*For IE & EDGE*/
     min-width: 100%;
-    grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
 }
 %gridMoviesGenres {

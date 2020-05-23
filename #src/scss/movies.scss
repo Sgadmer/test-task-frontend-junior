@@ -8,13 +8,14 @@
     .selector {
         &__btn {
             @extend %fontVar4;
-            padding-bottom: 3px;
             color: $mainBlackColor;
-            outline: none;/*For IE*/
+            outline: none; /*For IE*/
+            padding-bottom: 7px;
         }
 
         &__btn:first-child {
-            margin-right: 24px;
+            margin-left: 3px;
+            margin-right: 21px;
         }
 
         &__btn_selected {
@@ -39,7 +40,8 @@
             -moz-transform: translateY(-4px);
             -ms-transform: translateY(-4px);
             -o-transform: translateY(-4px);
-            margin-right: 10px;
+            margin-right: 8px;
+            max-height: 27px;
         }
 
         h2 {
@@ -51,23 +53,25 @@
         }
 
         &__item {
+            max-width: 24%;
             cursor: pointer;
-            min-width: 24%;
         }
 
         &__img-desc {
             position: relative;
+            overflow: hidden;
+            margin-bottom: 16px;
             border-radius: 8px;
             -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
             -ms-border-radius: 8px;
             -o-border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 16px;
         }
 
         &__img {
             min-width: 100%;
+            max-width: 280px;
+            max-height: 370px;
         }
 
         &__description {
@@ -103,7 +107,7 @@
                 margin-bottom: 16px;
             }
 
-            & *{
+            & * {
                 border-radius: 6px;
                 -webkit-border-radius: 6px;
                 -moz-border-radius: 6px;
@@ -115,7 +119,8 @@
                 @extend %gridMoviesGenres;
 
                 &__item {
-                    min-width: 24%;/*For IE & EDGE*/
+                    min-width: 23.7%;
+                    max-width: 23.7%; /*For IE & EDGE*/
                     height: 208px;
                     box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
                     padding-top: 80px;

@@ -1,10 +1,10 @@
 header {
-    position: sticky;
+    // position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 44px;
+    margin-bottom: 47px;
     z-index: 99;
     background-color: $mainWhiteColor;
 }
@@ -63,7 +63,7 @@ input::placeholder {
 input {
     @extend %fontVar3;
     border-bottom: 1px solid $mainBlackColor;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
 }
 
 .search-form {
@@ -83,20 +83,25 @@ input {
     }
 }
 
-.phone-search-button{
+.phone-search-button {
     display: none;
 }
 
 .login-btn {
-    @extend %fontVar3;
+    @extend%fontVar3;
     color: $mainWhiteColor;
     text-align: center;
     width: 113px;
     background-color: $mainRedColor;
     height: 38px;
     border-radius: 4px;
-
-    &:hover {
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    &:hover 
+{
         background: #cc221b;
     }
 }
