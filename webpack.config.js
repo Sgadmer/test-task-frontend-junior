@@ -1,22 +1,57 @@
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
-  entry: {
-    main: './#src/js/main.js'
-  },
+    entry: {
+        main: './#src/js/main.js'
+    },
 
- output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, './js'),
-    publicPath: '/js'
-  },
-  module: {
-    rules: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
-    }]
-  },
-  devServer: {
-    overlay: true
-  },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, './js'),
+        publicPath: '/js'
+    },
+    module: {
+        rules: [{
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: '/node_modules/'
+        }, {
+            test: /\.css$/,
+            use: [
+                'style-loader',
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }
+                }, {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: '#src/js/postcss.config.js' } }
+                }
+            ]
+        }, {
+            test: /\.scss$/,
+            use: [
+                'style-loader',
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }
+                }, {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: '#src/js/postcss.config.js' } }
+                }, {
+                    loader: 'sass-loader',
+                    options: { sourceMap: true }
+                }
+            ]
+        }]
+    },
+    devServer: {
+        overlay: true
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "style.css",
+        })
+    ],
 }
