@@ -12,11 +12,21 @@
     changeNameInput.addEventListener('focus', function () {
 
         changeNameInput.classList.remove('input-error');
+        addEventListener("keydown", setNewNameEvent);
 
     })
 
-    changeNameInput.addEventListener('blur', function () {
 
+    function setNewNameEvent(e) {
+        if (e.key == 'Enter' || +e.keyCode == 13) {
+            blurUserNameUnput();
+        }
+    }
+
+    changeNameInput.addEventListener('blur', blurUserNameUnput);
+
+
+    function blurUserNameUnput() {
         let NameValue = changeNameInput.value;
         if (!NameValue) {
             changeNameInput.classList.add('input-error');
@@ -25,6 +35,7 @@
             userNametoChange.innerHTML = NameValue;
             changeNameInput.classList.add('display-none-class');
             userNametoChange.classList.remove('display-none-class');
+            removeEventListener("keydown", setNewNameEvent);
         }
-    })
+    }
 }

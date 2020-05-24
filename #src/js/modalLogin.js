@@ -8,13 +8,24 @@
 
     headerLoginButton.addEventListener('click', function () {
         modalWrap.classList.remove('display-none-class');
+        addEventListener("keydown", closeModalEvent);
     });
+
+
+    function closeModalEvent(e) {
+        if (e.key == 'Escape' || +e.keyCode == 27) {
+            modalWrap.classList.add('display-none-class');
+            removeEventListener("keydown", closeModalEvent);
+        }
+    }
+
 
     modalWrap.addEventListener('click', function (e) {
         let target = e.target;
         let modalWrapBlock = e.currentTarget;
         if (target == modalWrapBlock) {
             modalWrap.classList.add('display-none-class');
+            removeEventListener("keydown", closeModalEvent);
         }
     });
 
@@ -30,7 +41,7 @@
 
     function modalInputFocus(e) {
         let input = e.target;
-        inputValue = e.target.value;
+        let inputValue = e.target.value;
         input.classList.remove('input-error')
 
     }
@@ -52,7 +63,8 @@
 
         let userLogin = e.target[0].value;
         let userPassword = e.target[1].value;
-        let is_remember = e.target[2].checked;
+        // let is_remember = e.target[2].checked;
+        let is_remember = true;
 
         if (!userLogin) {
             modalLogin.classList.add('input-error');
@@ -68,6 +80,8 @@
             } else {
                 localStorage.setItem('is_remember', 0);
             }
+
+            localStorage.userName = userLogin;
             loginTrue();
         }
 
@@ -84,13 +98,7 @@
         modalWrap.classList.add('display-none-class');
         headerLoginButton.classList.add('display-none-class');
         userNameExit.classList.remove('display-none-class');
-        if (localStorage.userName) {
-            userName.innerHTML = localStorage.userName;
-        } else {
-            userName.innerHTML = 'Константин К.'
-        }
-
-
+        userName.innerHTML = localStorage.userName;
     }
 
     let exitButton = document.querySelector('.exit-btn');

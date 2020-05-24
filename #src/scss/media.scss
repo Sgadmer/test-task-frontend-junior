@@ -1,18 +1,19 @@
 /*mediaSmallDesktop*/
 /* Portrait tablets and small desktops */
 @media (max-width: 1180px) {
-    .channels-list {
-        &__item {
-            height: max-content;
-        }
+    .channels {
+        &-list {
+            &__item {
+                height: max-content;
+            }
 
-        &__logo-wrap {
-            min-width: 300px;
-            max-width: 300px;
-            height: fit-content;
+            &__logo-wrap {
+                min-width: 300px;
+                max-width: 300px;
+                height: fit-content;
+            }
         }
     }
-
     #channelsScrollBar {
         transform: translateX(-4px);
         -webkit-transform: translateX(-4px);
@@ -224,7 +225,7 @@
             }
         }
 
-        .header__login-btn{
+        .header__login-btn {
             margin-right: 0;
         }
 
