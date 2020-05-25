@@ -29,7 +29,7 @@
         }
     });
 
-
+    
 
     let modalLogin = document.querySelector('.modal__login');
     modalLogin.addEventListener('focus', modalInputFocus);

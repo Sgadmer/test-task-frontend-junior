@@ -51,33 +51,13 @@
         }
     );
 
-    window.addEventListener('resize', hideCustomScrollBar)
-
-    function hideCustomScrollBar() {
-
-        if (currentSelectorName != 'channels') {
-            customScrollBar.classList.add('display-none-class');
-            customScrollBarHR.classList.add('display-none-class');
-        }
-
-    }
-
-
-    // Код для всех браузеров, кроме IE 
-    // Изначально пытался сделать проверку на IE с помощью 
-    // let ua = window.navigator.userAgent.toLowerCase();
-    // let is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
-    //и через if else использовать нужный вариант кода, но код в IE не работал при таком подходе,
-    //поэтому  вариант ниже оставлю для примера, как реализовывал бы для новых браузеров
-
 
 
     // moviesChannelsSelectors.forEach((selector) => {
     //     selector.addEventListener('click', (e) => {
     //         let currentSelector = e.currentTarget;
-    //         let currentSelectorName = currentSelector.getAttribute('data-selector');
-    //         let currentBlockToShow = document
-    //             .querySelector(`.${currentSelectorName}`);
+    //             currentSelectorName = currentSelector.getAttribute('data-selector');
+    //         let currentBlockToShow = document.querySelector(`.${currentSelectorName}`);
 
     //         moviesChannelsSelectors.forEach((selector) => {
     //             selector.classList.remove('selector__btn_selected');
@@ -89,16 +69,33 @@
     //             currentBlockToShow.classList.add('display-block-class');
     //         });
 
-
     //         if (currentSelectorName == 'channels') {
     //             customScrollBar.classList.remove('display-none-class');
+    //             customScrollBarHR.classList.remove('display-none-class');
     //         } else {
     //             customScrollBar.classList.add('display-none-class');
+    //             customScrollBarHR.classList.add('display-none-class');
     //         }
 
     //     });
     // });
+
+
+    window.addEventListener('resize', hideCustomScrollBar)
+
+    function hideCustomScrollBar() {
+
+        if (currentSelectorName != 'channels') {
+            customScrollBar.classList.add('display-none-class');
+            customScrollBarHR.classList.add('display-none-class');
+        }
+
+    }
 }
+
+
+
+
 
 
 

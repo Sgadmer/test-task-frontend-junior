@@ -33,6 +33,7 @@
     header {
         margin-bottom: 10%;
         position: relative;
+        padding-right: 2%;
 
         .logo-serach-wrap {
             display: flex;
@@ -91,14 +92,13 @@
         .header__login-btn,
         .userNameExit {
             margin-left: 1%;
-            margin-right: 2%;
         }
     }
 
     .movies-TV {
         .movies {
             &__new-wrapper {
-                margin-left: 2%;
+                padding-left: 2%;
             }
             &__list {
                 padding: 3%;
@@ -213,9 +213,6 @@
             display: flex;
             justify-content: space-between;
 
-            .userName {
-                margin-right: 0.2%;
-            }
         }
 
         .search-form {
