@@ -8,18 +8,22 @@
 
     &-list {
         &__item {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
             height: 162px;
             background-color: $mainGreyColor;
-            margin-bottom: 16px;
+            color: $mainBlackColor;
             border-radius: 8px;
             width: 100%;
             display: flex;
             align-items: center;
             padding-right: 24px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
 
         &__logo-wrap {

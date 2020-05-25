@@ -37,7 +37,8 @@
                 <button class="header__login-btn login-btn"><span>Войти</span></button>
                 <div class="userNameExit display-none-class">
                     <p class="userName"></p>
-                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя" spellcheck="false">
+                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя"
+                        spellcheck="false">
                     <button class="exit-btn">Выйти</button>
                 </div>
             </header>
@@ -62,12 +63,11 @@
 
             <div class="movies-TV">
                 <div class="selector">
-                    <button class="selector__btn  selector__btn_selected"
-                        data-selector="movies"><span>Фильмы</span></button>
-                    <button class="selector__btn" data-selector="channels"><span>Телеканалы</span></button>
+                    <button class="selector__btn  selector__btn_selected" data-selector="1"><span>Фильмы</span></button>
+                    <button class="selector__btn" data-selector="2"><span>Телеканалы</span></button>
                 </div>
 
-                <div class="movies moviesAndChannelsBlocks display-block-class">
+                <section class="movies moviesAndChannelsBlocks tab--1 section-selected">
 
                     <div class="movies__new-wrapper">
                         <img src="/img/movies/emoji/fire.png" alt="fire emoji" class="movies__fire-emoji">
@@ -75,251 +75,295 @@
                     </div>
 
 
-                    <div class="movies__list">
+                    <ul class="movies__list">
 
-                        <figure class="movies__item">
-                            <div class="movies__img-desc">
-                                <img src="/img/movies/movies__img/1.png" alt="kitten" class="movies__img">
-                                <div class="movies__description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore obcaecati officia,
-                                    ratione aut soluta, magni iste mollitia minima aliquid ipsum consequuntur vel? Nulla
-                                    ipsum minus excepturi commodi dolorem quaerat quae?
+                        <li class="movies__item">
+                            <a href="" class="movie__link">
+                                <div class="movies__img-desc">
+                                    <img src="/img/movies/movies__img/1.png" alt="kitten" class="movies__img">
+                                    <div class="movies__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore obcaecati
+                                        officia,
+                                        ratione aut soluta, magni iste mollitia minima aliquid ipsum consequuntur vel?
+                                        Nulla
+                                        ipsum minus excepturi commodi dolorem quaerat quae?
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <figcaption class="movies__title">
                                 Мульт в кино. Выпуск №103. <br>Некогда грустить!
                             </figcaption>
-                        </figure>
 
-                        <figure class="movies__item">
-                            <div class="movies__img-desc">
-                                <img src="/img/movies/movies__img/2.png" alt="batman" class="movies__img">
-                                <div class="movies__description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore omnis aliquam
-                                    facilis sint deleniti blanditiis voluptate delectus maxime odio asperiores
-                                    accusantium iusto at voluptatum quas, saepe alias reiciendis veniam.
+                        </li>
+
+                        <li class="movies__item">
+                            <a href="" class="movie__link">
+                                <div class="movies__img-desc">
+                                    <img src="/img/movies/movies__img/2.png" alt="batman" class="movies__img">
+                                    <div class="movies__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore omnis
+                                        aliquam
+                                        facilis sint deleniti blanditiis voluptate delectus maxime odio asperiores
+                                        accusantium iusto at voluptatum quas, saepe alias reiciendis veniam.
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <figcaption class="movies__title">
                                 Новый Бэтмен
                             </figcaption>
-                        </figure>
 
-                        <figure class="movies__item">
-                            <div class="movies__img-desc">
-                                <img src="/img/movies/movies__img/3.png" alt="Hollywood" class="movies__img">
-                                <div class="movies__description">
-                                    Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате
-                                    его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
-                                    найти свое место в стремительно меняющемся мире киноиндустрии.
+                        </li>
+
+                        <li class="movies__item">
+                            <a href="" class="movie__link">
+                                <div class="movies__img-desc">
+                                    <img src="/img/movies/movies__img/3.png" alt="Hollywood" class="movies__img">
+                                    <div class="movies__description">
+                                        Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на
+                                        закате
+                                        его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
+                                        найти свое место в стремительно меняющемся мире киноиндустрии.
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <figcaption class="movies__title">
                                 Однажды... в Голливуде
                             </figcaption>
-                        </figure>
 
-                        <figure class="movies__item">
-                            <div class="movies__img-desc">
-                                <img src="img/movies/movies__img/4.png" alt="stripper" class="movies__img">
-                                <div class="movies__description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quasi voluptates ex
-                                    eum commodi corrupti consequatur culpa quam deleniti esse non minus corporis nihil
-                                    aperiam quod numquam, perspiciatis illo? Molestiae?
+                        </li>
+
+                        <li class="movies__item">
+                            <a href="" class="movie__link">
+                                <div class="movies__img-desc">
+                                    <img src="img/movies/movies__img/4.png" alt="stripper" class="movies__img">
+                                    <div class="movies__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quasi voluptates
+                                        ex
+                                        eum commodi corrupti consequatur culpa quam deleniti esse non minus corporis
+                                        nihil
+                                        aperiam quod numquam, perspiciatis illo? Molestiae?
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <figcaption class="movies__title">
                                 Стриптизёрши
                             </figcaption>
-                        </figure>
-                    </div>
 
-                    <div class="genres">
+                        </li>
+                    </ul>
+
+                    <section class="genres">
                         <h2 class="genres__h2">Жанры</h2>
-                        <div class="genres-list">
-                            <figure class="genres-list__item">
-                                <div class="genres-list__emoji-figcaption">
-                                    <img src="/img/movies/genres/1.png" alt="">
-                                    <figcaption>Комедии</figcaption>
+                        <ul class="genres-list">
+                            <li class="genres-list__item">
+                                <a href="" class="genres-list__link">
+                                    <div class="genres-list__emoji-figcaption">
+                                        <img src="/img/movies/genres/1.png" alt="">
+                                        <figcaption>Комедии</figcaption>
+                                    </div>
+                                    <div class="genres-list__comedy genres-list__background"></div>
+                                </a>
+                            </li>
+                            <li class="genres-list__item">
+                                <a href="" class="genres-list__link">
+                                    <div class="genres-list__emoji-figcaption">
+                                        <img src="/img/movies/genres/2.png" alt="">
+                                        <figcaption>Драмы</figcaption>
+                                    </div>
+                                    <div class="genres-list__drama genres-list__background"></div>
+                                </a>
+                            </li>
+                            <li class="genres-list__item">
+                                <a href="" class="genres-list__link">
+                                    <div class="genres-list__emoji-figcaption">
+                                        <img src="/img/movies/genres/3.png" alt="">
+                                        <figcaption>Фантастика</figcaption>
+                                    </div>
+                                    <div class="genres-list__fantasy genres-list__background"></div>
+                                </a>
+                            </li>
+                            <li class="genres-list__item">
+                                <a href="" class="genres-list__link">
+                                    <div class="genres-list__emoji-figcaption">
+                                        <img src="/img/movies/genres/4.png" alt="">
+                                        <figcaption>Ужасы</figcaption>
+                                    </div>
+                                    <div class="genres-list__horrors genres-list__background"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="channels moviesAndChannelsBlocks tab--2">
+                    <ul class="channels-list">
+
+                        <li class="channels-list__item">
+                            <a href="" class="channels-list__link">
+                                <div class="channels-list__logo-wrap">
+                                    <img src="/img/channels/1.svg" alt="Первый канал" class="channels-list__logo">
                                 </div>
-                                <div class="genres-list__comedy genres-list__background"></div>
-                            </figure>
-                            <figure class="genres-list__item">
-                                <div class="genres-list__emoji-figcaption">
-                                    <img src="/img/movies/genres/2.png" alt="">
-                                    <figcaption>Драмы</figcaption>
+                                <div class="channels-list__info">
+                                    <h2 class="channels-list__channel-title">Первый канал</h2>
+                                    <ul class="channels-list__broadcast-list">
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">13:00</p>
+                                            <p class="channels-list__broadcast-title">Новости (с субтитрами)</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">14:00</p>
+                                            <p class="channels-list__broadcast-title">Давай поженимся</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">15:00</p>
+                                            <p class="channels-list__broadcast-title">Другие новости</p>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="genres-list__drama genres-list__background"></div>
-                            </figure>
-                            <figure class="genres-list__item">
-                                <div class="genres-list__emoji-figcaption">
-                                    <img src="/img/movies/genres/3.png" alt="">
-                                    <figcaption>Фантастика</figcaption>
+                            </a>
+                        </li>
+
+                        <li class="channels-list__item">
+                            <a href="" class="channels-list__link">
+                                <div class="channels-list__logo-wrap">
+                                    <img src="/img/channels/2.svg" alt="2x2" class="channels-list__logo">
                                 </div>
-                                <div class="genres-list__fantasy genres-list__background"></div>
-                            </figure>
-                            <figure class="genres-list__item">
-                                <div class="genres-list__emoji-figcaption">
-                                    <img src="/img/movies/genres/4.png" alt="">
-                                    <figcaption>Ужасы</figcaption>
+                                <div class="channels-list__info">
+                                    <h2 class="channels-list__channel-title">2x2</h2>
+                                    <ul class="channels-list__broadcast-list">
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">13:00</p>
+                                            <p class="channels-list__broadcast-title">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">14:00</p>
+                                            <p class="channels-list__broadcast-title">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7
+                                                серия
+                                            </p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">15:00</p>
+                                            <p class="channels-list__broadcast-title">БУРДАШЕВ. Сезон 1, 20 серия</p>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="genres-list__horrors genres-list__background"></div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
+                            </a>
+                        </li>
 
-                <div class="channels moviesAndChannelsBlocks">
-                    <div class="channels-list">
+                        <li class="channels-list__item">
+                            <a href="" class="channels-list__link">
+                                <div class="channels-list__logo-wrap">
+                                    <img src="/img/channels/3.svg" alt="РБК" class="channels-list__logo">
+                                </div>
+                                <div class="channels-list__info">
+                                    <h2 class="channels-list__channel-title">РБК</h2>
+                                    <ul class="channels-list__broadcast-list">
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">13:00</p>
+                                            <p class="channels-list__broadcast-title">ДЕНЬ. Горючая смесь: как бороться
+                                                с
+                                                суррогатом на АЗС</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">14:00</p>
+                                            <p class="channels-list__broadcast-title">ДЕНЬ. Главные темы</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">15:00</p>
+                                            <p class="channels-list__broadcast-title">Главные новости</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
 
-                        <div class="channels-list__item">
-                            <div class="channels-list__logo-wrap">
-                                <img src="/img/channels/1.svg" alt="Первый канал" class="channels-list__logo">
-                            </div>
-                            <div class="channels-list__info">
-                                <h2 class="channels-list__channel-title">Первый канал</h2>
-                                <ul class="channels-list__broadcast-list">
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">13:00</p>
-                                        <p class="channels-list__broadcast-title">Новости (с субтитрами)</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">14:00</p>
-                                        <p class="channels-list__broadcast-title">Давай поженимся</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">15:00</p>
-                                        <p class="channels-list__broadcast-title">Другие новости</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <li class="channels-list__item">
+                            <a href="" class="channels-list__link">
+                                <div class="channels-list__logo-wrap">
+                                    <img src="/img/channels/4.svg" alt="AMEDIA PREMIUM" class="channels-list__logo">
+                                </div>
+                                <div class="channels-list__info">
+                                    <h2 class="channels-list__channel-title">AMEDIA PREMIUM</h2>
+                                    <ul class="channels-list__broadcast-list">
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">13:00</p>
+                                            <p class="channels-list__broadcast-title">Клиент всегда мёртв</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">14:00</p>
+                                            <p class="channels-list__broadcast-title">Голодные игры: Сойка-пересмешница.
+                                                Часть I</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">15:00</p>
+                                            <p class="channels-list__broadcast-title">Секс в большом городе</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
 
-                        <div class="channels-list__item">
-                            <div class="channels-list__logo-wrap">
-                                <img src="/img/channels/2.svg" alt="2x2" class="channels-list__logo">
-                            </div>
-                            <div class="channels-list__info">
-                                <h2 class="channels-list__channel-title">2x2</h2>
-                                <ul class="channels-list__broadcast-list">
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">13:00</p>
-                                        <p class="channels-list__broadcast-title">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">14:00</p>
-                                        <p class="channels-list__broadcast-title">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия
-                                        </p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">15:00</p>
-                                        <p class="channels-list__broadcast-title">БУРДАШЕВ. Сезон 1, 20 серия</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <li class="channels-list__item">
+                            <a href="" class="channels-list__link">
+                                <div class="channels-list__logo-wrap">
+                                    <img src="/img/channels/5.svg" alt="" class="channels-list__logo">
+                                </div>
+                                <div class="channels-list__info">
+                                    <h2 class="channels-list__channel-title">LOREM</h2>
+                                    <ul class="channels-list__broadcast-list">
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">13:00</p>
+                                            <p class="channels-list__broadcast-title">Lorem ipsum dolor, sit amet
+                                                consectetur adipisicing elit.</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">14:00</p>
+                                            <p class="channels-list__broadcast-title">Perferendis saepe necessitatibus
+                                                ex
+                                                expedita, dolores aliquid placeat sed.</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">15:00</p>
+                                            <p class="channels-list__broadcast-title">Lorem asperiores voluptatem
+                                                quibusdam
+                                                odio amet.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="channels-list__item">
+                            <a href="" class="channels-list__link">
+                                <div class="channels-list__logo-wrap">
+                                    <img src="/img/channels/6.svg" alt="" class="channels-list__logo">
+                                </div>
+                                <div class="channels-list__info">
+                                    <h2 class="channels-list__channel-title">LOREM2</h2>
+                                    <ul class="channels-list__broadcast-list">
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">13:00</p>
+                                            <p class="channels-list__broadcast-title">Lorem ipsum dolor, sit amet
+                                                consectetur adipisicing elit.</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">14:00</p>
+                                            <p class="channels-list__broadcast-title">Perferendis saepe necessitatibus
+                                                ex
+                                                expedita, dolores aliquid placeat sed.</p>
+                                        </li>
+                                        <li class="channels-list__broadcast">
+                                            <p class="channels-list__broadcast-time">15:00</p>
+                                            <p class="channels-list__broadcast-title">Lorem asperiores voluptatem
+                                                quibusdam
+                                                odio amet.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
 
-                        <div class="channels-list__item">
-                            <div class="channels-list__logo-wrap">
-                                <img src="/img/channels/3.svg" alt="РБК" class="channels-list__logo">
-                            </div>
-                            <div class="channels-list__info">
-                                <h2 class="channels-list__channel-title">РБК</h2>
-                                <ul class="channels-list__broadcast-list">
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">13:00</p>
-                                        <p class="channels-list__broadcast-title">ДЕНЬ. Горючая смесь: как бороться с
-                                            суррогатом на АЗС</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">14:00</p>
-                                        <p class="channels-list__broadcast-title">ДЕНЬ. Главные темы</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">15:00</p>
-                                        <p class="channels-list__broadcast-title">Главные новости</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="channels-list__item">
-                            <div class="channels-list__logo-wrap">
-                                <img src="/img/channels/4.svg" alt="AMEDIA PREMIUM" class="channels-list__logo">
-                            </div>
-                            <div class="channels-list__info">
-                                <h2 class="channels-list__channel-title">AMEDIA PREMIUM</h2>
-                                <ul class="channels-list__broadcast-list">
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">13:00</p>
-                                        <p class="channels-list__broadcast-title">Клиент всегда мёртв</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">14:00</p>
-                                        <p class="channels-list__broadcast-title">Голодные игры: Сойка-пересмешница.
-                                            Часть I</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">15:00</p>
-                                        <p class="channels-list__broadcast-title">Секс в большом городе</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="channels-list__item">
-                            <div class="channels-list__logo-wrap">
-                                <img src="/img/channels/5.svg" alt="" class="channels-list__logo">
-                            </div>
-                            <div class="channels-list__info">
-                                <h2 class="channels-list__channel-title">LOREM</h2>
-                                <ul class="channels-list__broadcast-list">
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">13:00</p>
-                                        <p class="channels-list__broadcast-title">Lorem ipsum dolor, sit amet
-                                            consectetur adipisicing elit.</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">14:00</p>
-                                        <p class="channels-list__broadcast-title">Perferendis saepe necessitatibus ex
-                                            expedita, dolores aliquid placeat sed.</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">15:00</p>
-                                        <p class="channels-list__broadcast-title">Lorem asperiores voluptatem quibusdam
-                                            odio amet.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="channels-list__item">
-                            <div class="channels-list__logo-wrap">
-                                <img src="/img/channels/6.svg" alt="" class="channels-list__logo">
-                            </div>
-                            <div class="channels-list__info">
-                                <h2 class="channels-list__channel-title">LOREM2</h2>
-                                <ul class="channels-list__broadcast-list">
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">13:00</p>
-                                        <p class="channels-list__broadcast-title">Lorem ipsum dolor, sit amet
-                                            consectetur adipisicing elit.</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">14:00</p>
-                                        <p class="channels-list__broadcast-title">Perferendis saepe necessitatibus ex
-                                            expedita, dolores aliquid placeat sed.</p>
-                                    </li>
-                                    <li class="channels-list__broadcast">
-                                        <p class="channels-list__broadcast-time">15:00</p>
-                                        <p class="channels-list__broadcast-title">Lorem asperiores voluptatem quibusdam
-                                            odio amet.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                    </ul>
+                </section>
             </div>
         </div>
 
@@ -338,7 +382,6 @@
             </div>
         </footer>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>

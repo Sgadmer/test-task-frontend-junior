@@ -10,95 +10,59 @@
     let customScrollBarHR = document
         .querySelector('#channelsScrollBar-hr');
 
-    let currentSelectorName;
-
-    //  Код для всех браузеров.
-    Array.prototype.forEach.call(
-        moviesChannelsSelectors,
-        function (selector) {
-            selector.addEventListener('click', function (e) {
-
-
-                let currentSelector = e.currentTarget;
-                currentSelectorName = currentSelector.getAttribute('data-selector');
-                let currentBlockToShow = document.querySelector("." + currentSelectorName);
-                Array.prototype.forEach.call(
-                    moviesChannelsSelectors,
-                    function (selector) {
-                        selector.classList.remove('selector__btn_selected');
-                        currentSelector.classList.add('selector__btn_selected');
-                    }
-                );
-
-                Array.prototype.forEach.call(
-                    moviesAndChannelsBlocks,
-                    function (block) {
-                        block.classList.remove('display-block-class');
-                        currentBlockToShow.classList.add('display-block-class');
-                    }
-                );
-
-                if (currentSelectorName == 'channels') {
-                    customScrollBar.classList.remove('display-none-class');
-                    customScrollBarHR.classList.remove('display-none-class');
-                } else {
-                    customScrollBar.classList.add('display-none-class');
-                    customScrollBarHR.classList.add('display-none-class');
-                }
-
-            });
-
-        }
-    );
+    let selectorIndex;
 
 
 
-    // moviesChannelsSelectors.forEach((selector) => {
-    //     selector.addEventListener('click', (e) => {
-    //         let currentSelector = e.currentTarget;
-    //             currentSelectorName = currentSelector.getAttribute('data-selector');
-    //         let currentBlockToShow = document.querySelector(`.${currentSelectorName}`);
-
-    //         moviesChannelsSelectors.forEach((selector) => {
-    //             selector.classList.remove('selector__btn_selected');
-    //             currentSelector.classList.add('selector__btn_selected');
-    //         });
-
-    //         moviesAndChannelsBlocks.forEach((block) => {
-    //             block.classList.remove('display-block-class');
-    //             currentBlockToShow.classList.add('display-block-class');
-    //         });
-
-    //         if (currentSelectorName == 'channels') {
-    //             customScrollBar.classList.remove('display-none-class');
-    //             customScrollBarHR.classList.remove('display-none-class');
-    //         } else {
-    //             customScrollBar.classList.add('display-none-class');
-    //             customScrollBarHR.classList.add('display-none-class');
-    //         }
-
-    //     });
-    // });
+    for (let i = 0; i < moviesChannelsSelectors.length; i++) {
+        moviesChannelsSelectors[i].addEventListener('click', changeTab);
+    }
 
 
-    window.addEventListener('resize', hideCustomScrollBar)
+    function changeTab(e) {
 
-    function hideCustomScrollBar() {
+        let currentTarget = e.currentTarget;
+        selectorIndex = +currentTarget.getAttribute('data-selector');
 
-        if (currentSelectorName != 'channels') {
+        document
+            .querySelector('.section-selected')
+            .classList
+            .remove('section-selected');
+
+        document
+            .querySelector(`.tab--${selectorIndex}`)
+            .classList
+            .add('section-selected');
+
+        document
+            .querySelector('.selector__btn_selected')
+            .classList
+            .remove('selector__btn_selected');
+
+        currentTarget
+            .classList
+            .add('selector__btn_selected');
+
+        if (selectorIndex == 2) {
+            customScrollBar.classList.remove('display-none-class');
+            customScrollBarHR.classList.remove('display-none-class');
+        } else {
             customScrollBar.classList.add('display-none-class');
             customScrollBarHR.classList.add('display-none-class');
         }
 
     }
+
+    window.addEventListener('resize', hideCustomScrollBar)
+
+    function hideCustomScrollBar() {
+
+        if (selectorIndex != 2) {
+            customScrollBar.classList.add('display-none-class');
+            customScrollBarHR.classList.add('display-none-class');
+        }
+
+    }
+
+
 }
-
-
-
-
-
-
-
-
-
-
