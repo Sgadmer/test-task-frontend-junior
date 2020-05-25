@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Видеосервис</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/dist/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="icon" href="/img/icon/favicon.ico" type="image/x-icon">
@@ -63,11 +63,11 @@
             <div class="movies-TV">
                 <div class="selector">
                     <button class="selector__btn  selector__btn_selected"
-                        data-selector="movies"><span>Фильмы</span></button>
-                    <button class="selector__btn" data-selector="channels"><span>Телеканалы</span></button>
+                        data-selector="1"><span>Фильмы</span></button>
+                    <button class="selector__btn" data-selector="2"><span>Телеканалы</span></button>
                 </div>
 
-                <div class="movies moviesAndChannelsBlocks display-block-class">
+                <div class="movies moviesAndChannelsBlocks tab--1 display-block-class">
 
                     <div class="movies__new-wrapper">
                         <img src="/img/movies/emoji/fire.png" alt="fire emoji" class="movies__fire-emoji">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
 
-                <div class="channels moviesAndChannelsBlocks">
+                <div class="channels moviesAndChannelsBlocks tab--2">
                     <div class="channels-list">
 
                         <div class="channels-list__item">
@@ -342,7 +342,7 @@
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/dist/main.js"></script>
 </body>
 
 </html>
