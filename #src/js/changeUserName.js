@@ -2,14 +2,14 @@
     let userNametoChange = document.querySelector('.userName');
     let changeNameInput = document.querySelector('.user-name-input')
 
-    userNametoChange.addEventListener('click', function () {
+    userNametoChange.addEventListener('click',  () => {
         changeNameInput.value = userNametoChange.innerHTML;
         changeNameInput.classList.remove('display-none-class');
         userNametoChange.classList.add('display-none-class');
         changeNameInput.focus();
     })
 
-    changeNameInput.addEventListener('focus', function () {
+    changeNameInput.addEventListener('focus',  () => {
 
         changeNameInput.classList.remove('input-error');
         addEventListener("keydown", setNewNameEvent);

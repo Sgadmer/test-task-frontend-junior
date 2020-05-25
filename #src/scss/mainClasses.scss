@@ -20,7 +20,7 @@ body {
     max-width: 1180px;
 }
 
-.display-block-class {
+.display-block-class, .section-selected {
     display: block !important;
 }
 
@@ -43,5 +43,6 @@ button span {
 .input-error::placeholder {
     color: $mainRedColor !important;
 }
+
 
 /*--------------------*/

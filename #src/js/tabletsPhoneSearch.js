@@ -4,13 +4,13 @@
     let phoneSearchButton = document.querySelector('.phone-search-button');
     let searchFormButton = document.querySelector('.search-form__button');
 
-    phoneSearchButton.addEventListener('click', function () {
+    phoneSearchButton.addEventListener('click',  () => {
         searchForm.classList.add('search-form-run-out');
         searchFormInput.focus();
         phoneSearchButton.classList.add('display-none-class');
     });
 
-    searchFormInput.addEventListener('blur', function (e) {
+    searchFormInput.addEventListener('blur',  (e) => {
         let relTarget = e.relatedTarget;
         if (searchFormButton == relTarget){
             searchFormInput.value = '';

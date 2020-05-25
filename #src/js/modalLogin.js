@@ -6,7 +6,7 @@
     let rememberCheckbox = document.querySelector('#box-1');
 
 
-    headerLoginButton.addEventListener('click', function () {
+    headerLoginButton.addEventListener('click',  () => {
         modalWrap.classList.remove('display-none-class');
         addEventListener("keydown", closeModalEvent);
     });
@@ -20,7 +20,7 @@
     }
 
 
-    modalWrap.addEventListener('click', function (e) {
+    modalWrap.addEventListener('click',  (e) => {
         let target = e.target;
         let modalWrapBlock = e.currentTarget;
         if (target == modalWrapBlock) {
@@ -58,7 +58,7 @@
     let userNameExit = document.querySelector('.userNameExit');
     let userName = document.querySelector('.userName');
 
-    modal.addEventListener('submit', function (e) {
+    modal.addEventListener('submit',  (e) => {
         e.preventDefault();
 
         let userLogin = e.target[0].value;

@@ -37,7 +37,8 @@
                 <button class="header__login-btn login-btn"><span>Войти</span></button>
                 <div class="userNameExit display-none-class">
                     <p class="userName"></p>
-                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя" spellcheck="false">
+                    <input type="text" class="user-name-input display-none-class" placeholder="Введите имя"
+                        spellcheck="false">
                     <button class="exit-btn">Выйти</button>
                 </div>
             </header>
@@ -62,12 +63,11 @@
 
             <div class="movies-TV">
                 <div class="selector">
-                    <button class="selector__btn  selector__btn_selected"
-                        data-selector="1"><span>Фильмы</span></button>
+                    <button class="selector__btn  selector__btn_selected" data-selector="1"><span>Фильмы</span></button>
                     <button class="selector__btn" data-selector="2"><span>Телеканалы</span></button>
                 </div>
 
-                <div class="movies moviesAndChannelsBlocks tab--1 display-block-class">
+                <section class="movies moviesAndChannelsBlocks tab--1 section-selected">
 
                     <div class="movies__new-wrapper">
                         <img src="/img/movies/emoji/fire.png" alt="fire emoji" class="movies__fire-emoji">
@@ -134,7 +134,7 @@
                         </figure>
                     </div>
 
-                    <div class="genres">
+                    <section class="genres">
                         <h2 class="genres__h2">Жанры</h2>
                         <div class="genres-list">
                             <figure class="genres-list__item">
@@ -166,10 +166,10 @@
                                 <div class="genres-list__horrors genres-list__background"></div>
                             </figure>
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-                <div class="channels moviesAndChannelsBlocks tab--2">
+                <section class="channels moviesAndChannelsBlocks tab--2">
                     <div class="channels-list">
 
                         <div class="channels-list__item">
@@ -319,7 +319,7 @@
                         </div>
 
                     </div>
-                </div>
+                </section>
             </div>
         </div>
 

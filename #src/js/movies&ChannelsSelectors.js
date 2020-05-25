@@ -14,24 +14,34 @@
 
 
 
-    for (let selector of moviesChannelsSelectors) {
-        selector.addEventListener('click', changeTab);
+    for (let i = 0; i < moviesChannelsSelectors.length; i++) {
+        moviesChannelsSelectors[i].addEventListener('click', changeTab);
     }
+
 
     function changeTab(e) {
 
-        selectorIndex = +e.currentTarget.getAttribute('data-selector');
+        let currentTarget = e.currentTarget;
+        selectorIndex = +currentTarget.getAttribute('data-selector');
 
         document
-        .querySelector('.moviesAndChannelsBlocks', 'display-block-class')
-        .classList
-        .remove('display-block-class');
+            .querySelector('.section-selected')
+            .classList
+            .remove('section-selected');
 
         document
-        .querySelector(`.tab--${selectorIndex}`)
-        .classList
-        .add('display-block-class');
+            .querySelector(`.tab--${selectorIndex}`)
+            .classList
+            .add('section-selected');
 
+        document
+            .querySelector('.selector__btn_selected')
+            .classList
+            .remove('selector__btn_selected');
+
+        currentTarget
+            .classList
+            .add('selector__btn_selected');
 
         if (selectorIndex == 2) {
             customScrollBar.classList.remove('display-none-class');
@@ -40,8 +50,6 @@
             customScrollBar.classList.add('display-none-class');
             customScrollBarHR.classList.add('display-none-class');
         }
-
-        console.log(e);
 
     }
 
