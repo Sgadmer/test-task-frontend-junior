@@ -1,3 +1,4 @@
+import inputValidator from './inputValidator'
 {
     let headerLoginButton = document.querySelector('.header__login-btn');
     let modalWrap = document.querySelector('.modal-wrap');
@@ -6,7 +7,7 @@
     let rememberCheckbox = document.querySelector('#box-1');
 
 
-    headerLoginButton.addEventListener('click',  () => {
+    headerLoginButton.addEventListener('click', () => {
         modalWrap.classList.remove('display-none-class');
         addEventListener("keydown", closeModalEvent);
     });
@@ -19,8 +20,7 @@
         }
     }
 
-
-    modalWrap.addEventListener('click',  (e) => {
+    modalWrap.addEventListener('click', (e) => {
         let target = e.target;
         let modalWrapBlock = e.currentTarget;
         if (target == modalWrapBlock) {
@@ -29,36 +29,24 @@
         }
     });
 
-    
+
 
     let modalLogin = document.querySelector('.modal__login');
-    modalLogin.addEventListener('focus', modalInputFocus);
-    modalLogin.addEventListener('blur', modalInputBlur);
+    modalLogin.addEventListener('input', inputValidator(false, 13));
+    modalLogin.addEventListener('blur', inputValidator(false, 13));
+
 
     let modalPassword = document.querySelector('.modal__password');
-    modalPassword.addEventListener('focus', modalInputFocus);
-    modalPassword.addEventListener('blur', modalInputBlur);
+    modalPassword.addEventListener('input', inputValidator(true, Infinity))
+    modalPassword.addEventListener('blur', inputValidator(true, Infinity));
 
-    function modalInputFocus(e) {
-        let input = e.target;
-        let inputValue = e.target.value;
-        input.classList.remove('input-error')
 
-    }
-
-    function modalInputBlur(e) {
-        let input = e.target;
-        let inputValue = e.target.value;
-        if (inputValue == '') {
-            input.classList.add('input-error');
-        }
-    }
 
     let modal = document.querySelector('.modal');
     let userNameExit = document.querySelector('.userNameExit');
     let userName = document.querySelector('.userName');
 
-    modal.addEventListener('submit',  (e) => {
+    modal.addEventListener('submit', (e) => {
         e.preventDefault();
 
         let userLogin = e.target[0].value;
@@ -110,9 +98,10 @@
         headerLoginButton.classList.remove('display-none-class');
         userNameExit.classList.add('display-none-class');
         modalLogin.value = '';
-        modalPassword.value = ''
+        modalPassword.value = '';
         rememberCheckbox.checked = false;
     }
-
-
 }
+
+
+

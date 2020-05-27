@@ -1,0 +1,25 @@
+.phoneScrollButtons {
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    display: none;
+    flex-direction: column;
+
+    &__up,
+    &__down {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border: 2px solid rgb(75, 75, 75);
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+}

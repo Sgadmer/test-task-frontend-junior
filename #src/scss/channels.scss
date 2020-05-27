@@ -9,25 +9,23 @@
     &-list {
         &__item {
             margin-bottom: 16px;
-
             &:last-child {
                 margin-bottom: 0;
             }
         }
 
         &__link {
-            height: 162px;
             background-color: $mainGreyColor;
             color: $mainBlackColor;
             border-radius: 8px;
-            width: 100%;
             display: flex;
             align-items: center;
             padding-right: 24px;
+            height: 162px;
         }
 
         &__logo-wrap {
-            width: 400px;
+            min-width: 400px;
             height: 162px;
             display: flex;
             justify-content: center;
@@ -39,6 +37,7 @@
             padding-top: 21px;
             padding-bottom: 19px;
             height: 100%;
+            width: 100%;
         }
 
         &__channel-title {

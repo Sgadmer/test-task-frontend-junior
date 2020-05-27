@@ -41,6 +41,12 @@ button,
 textarea {
     font-family: inherit;
 }
+
+input,
+button {
+    white-space: nowrap;
+}
+
 input::-ms-clear {
     display: none;
 }

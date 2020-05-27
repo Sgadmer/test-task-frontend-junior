@@ -5,6 +5,7 @@ body {
     font-family: "Rubik";
     font-style: normal;
     color: $mainBlackColor;
+
     hyphens: auto;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -20,15 +21,16 @@ body {
     max-width: 1180px;
 }
 
-.display-block-class, .section-selected {
+.display-block-class,
+.section-selected {
     display: block !important;
 }
 
 .display-none-class {
     display: none !important;
-    max-width: 0 !important;
-    max-height: 0 !important;
-    opacity: 0 !important;
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
 }
 
 button span {
@@ -41,7 +43,7 @@ button span {
 }
 
 .input-error::placeholder {
-    color: $mainRedColor !important;
+    color: $mainRedColor;
 }
 
 /*--------------------*/
