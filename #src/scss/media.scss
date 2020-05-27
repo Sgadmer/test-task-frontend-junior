@@ -3,13 +3,12 @@
 @media (max-width: 1180px) {
     .channels {
         &-list {
-
-            &__item{
-                max-width: 100%
+            &__item {
+                max-width: 100%;
             }
             &__link {
                 height: max-content;
-                max-width: 100%
+                max-width: 100%;
             }
 
             &__logo-wrap {
@@ -145,7 +144,15 @@
         }
     }
 
-    .phoneScrollButtons{
+    .channels {
+        &-list {
+            &__link {
+                height: auto;
+            }
+        }
+    }
+
+    .phoneScrollButtons {
         display: flex;
     }
 }
@@ -214,7 +221,7 @@
             margin-left: 0;
         }
 
-        .phone-search-button{
+        .phone-search-button {
             margin: 0 auto;
         }
         .userNameExit {
@@ -224,10 +231,10 @@
             display: flex;
             justify-content: space-between;
 
-            .user-name-input, .userName {
+            .user-name-input,
+            .userName {
                 max-width: 150px;
             }
-
         }
 
         .search-form {
@@ -240,7 +247,6 @@
         .header__login-btn {
             margin-right: 0;
         }
-
     }
 
     .selector {
@@ -255,12 +261,11 @@
 
     .channels {
         &-list {
-
             &__link {
                 padding: 0 3%;
             }
 
-            &__channel-title{ 
+            &__channel-title {
                 text-align: center;
             }
 
@@ -313,7 +318,7 @@
                 color: $htc-color;
             }
 
-            &__logo{
+            &__logo {
                 align-self: center;
             }
         }
