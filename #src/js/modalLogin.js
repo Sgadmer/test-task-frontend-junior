@@ -94,6 +94,11 @@ import inputValidator from './inputValidator'
 
 
     function exitUser() {
+        let userNametoChange = document.querySelector('.userName');
+        let changeNameInput = document.querySelector('.user-name-input')
+        changeNameInput.classList.add('display-none-class');
+        userNametoChange.classList.remove('display-none-class');
+
         localStorage.setItem('is_remember', 0);
         headerLoginButton.classList.remove('display-none-class');
         userNameExit.classList.add('display-none-class');

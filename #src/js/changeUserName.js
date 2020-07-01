@@ -4,7 +4,7 @@ import inputValidator from './inputValidator'
     let changeNameInput = document.querySelector('.user-name-input')
 
     userNametoChange.addEventListener('click', () => {
-        changeNameInput.value = userNametoChange.innerHTML;
+        changeNameInput.value = userNametoChange.textContent;
         changeNameInput.classList.remove('display-none-class');
         userNametoChange.classList.add('display-none-class');
         changeNameInput.focus();
